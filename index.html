@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="That One Dutch Guy's DVD-R ISO Hangar — a collection of DVD-R projects, ISOs, and disc-based chaos by That One Dutch Guy.">
     <title>That One Dutch Guy's DVD-R ISO Hangar</title>
-  </head>
-  <body>
-    <h1>placeholder text</h1>
-  </body>
+    <link rel="icon" type="image/x-icon" href="./index.ico">
+    <link rel="preload" href="./That-One-Dutch-Guy-Channel-Logo-Circle.png" as="image">
+    <link rel="preload" href="./That-One-Dutch-Guy-Logo-Text.png" as="image">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ABOUT toggle button (top-left) -->
+    <button id="about-toggle" class="play-button about-toggle-btn" type="button" aria-pressed="false">📖 ABOUT</button>
+
+    <!-- Back to Toybox button (top-right) -->
+    <a href="https://thatonedutchguys-shit-ass-toybox.github.io/" target="_blank" rel="noopener noreferrer" class="play-button toybox-btn">🧸 SHIT ASS TOYBOX</a>
+
+    <main id="page-content">
+        <header class="brand-header">
+            <a href="https://www.youtube.com/@That1DutchGuy" target="_blank" rel="noopener noreferrer">
+                <img src="./That-One-Dutch-Guy-Channel-Logo-Circle.png" alt="That One Dutch Guy Logo" class="main-logo">
+            </a>
+            <img src="./That-One-Dutch-Guy-Logo-Text.png" alt="That One Dutch Guy" class="text-logo">
+        </header>
+
+        <h1 class="site-title">DVD-R ISO HANGAR</h1>
+
+        <!-- README / About view — hidden until the ABOUT button is clicked -->
+        <div id="readme-view">
+            <button id="doc-arrow-left" class="doc-nav-arrow doc-arrow-left" aria-label="Go to README" title="README.md">◀</button>
+            <div id="readme-panel">
+                <div id="doc-title-bar">
+                    <span id="doc-title-label">📖 README.md</span>
+                </div>
+                <div id="readme-content">
+                    <p class="readme-loading">loading readme.md ...</p>
+                </div>
+                <div id="wiki-content" style="display:none;">
+                    <p class="readme-loading">loading wiki.md ...</p>
+                </div>
+            </div>
+            <button id="doc-arrow-right" class="doc-nav-arrow doc-arrow-right" aria-label="Go to Wiki" title="Wiki.md">▶</button>
+        </div>
+
+        <!-- DVD-R project cards go here -->
+        <div id="projects-container">
+            <!-- Cards will go here! Drop 'em in like DVDs into a spindle 📀 -->
+        </div>
+
+    </main>
+
+    <button id="music-toggle" class="play-button music-toggle-btn" aria-label="Toggle music">🔊 MUSIC ON</button>
+
+    <script src="marked.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
 </html>
