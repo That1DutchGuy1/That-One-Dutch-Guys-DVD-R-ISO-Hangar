@@ -1,1 +1,645 @@
-// placeholder comment
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('./Comic-Sans-MS.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* =========================================
+   SPINNING CONIC RAINBOW — custom property
+   ========================================= */
+@property --spin-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin-text-rainbow {
+  0%   { --spin-angle: 0deg; }
+  100% { --spin-angle: 360deg; }
+}
+
+/* =========================================
+   GLOBAL RESET / BASE
+   ========================================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-weight: bold;
+  background: linear-gradient(-45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #FF13F0, #ff0000);
+  background-size: 300% 300%;
+  animation: meme-wave 10s ease infinite;
+  color: #88ff00;
+  -webkit-text-stroke: 0.6px #000;
+  text-align: center;
+  padding: 50px 20px 10px;
+  overflow-x: hidden;
+}
+
+@keyframes meme-wave {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* =========================================
+   BRAND HEADER
+   ========================================= */
+.brand-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.main-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Smooth spin — driven by JS on hover */
+.brand-header a .main-logo {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.brand-header a:hover .main-logo {
+  cursor: pointer;
+}
+
+.text-logo {
+  width: 400px;
+  max-width: 90%;
+  height: auto;
+  animation: pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* =========================================
+   SITE TITLE h1
+   ========================================= */
+h1 {
+  font-size: 4rem;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  background: conic-gradient(
+    from var(--spin-angle),
+    red, orange, yellow, green, cyan, blue, magenta, red
+  );
+  color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 2px #000;
+  text-shadow: none;
+  animation: spin-text-rainbow 2s linear infinite;
+}
+
+/* =========================================
+   PLAY / NAV BUTTONS  (shared base class)
+   ========================================= */
+.play-button {
+  display: inline-block;
+  background: conic-gradient(
+    from var(--spin-angle),
+    red, orange, yellow, green, cyan, blue, magenta, red
+  );
+  color: black;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  border: 4px solid #333;
+  border-radius: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  animation: spin-text-rainbow 2s linear infinite;
+  transition: transform 0.1s;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-stroke: 0px;
+  text-shadow: none;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.35);
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+}
+
+.play-button:active {
+  transform: scale(0.95);
+}
+
+/* =========================================
+   ABOUT BUTTON (top-left)
+   ========================================= */
+.about-toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1002;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+}
+
+/* =========================================
+   SHIT ASS TOYBOX BUTTON (top-right)
+   ========================================= */
+.toybox-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1002;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  color: black !important;
+}
+
+/* =========================================
+   MUSIC TOGGLE BUTTON (bottom-left)
+   ========================================= */
+.music-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1001;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  color: black !important;
+}
+
+.music-toggle-btn.music-off {
+  opacity: 0.75;
+  filter: grayscale(60%);
+}
+
+/* =========================================
+   PROJECTS CONTAINER
+   Centred grid for DVD-R cards — drop 'em in!
+   ========================================= */
+#projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 50px 60px;
+  justify-content: center;
+  margin-bottom: 80px;
+  padding: 30px;
+}
+
+/* =========================================
+   DVD-R PROJECT CARDS
+   ========================================= */
+.project-card {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 6px solid #333;
+  border-radius: 25px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.project-card:hover {
+  transform: scale(1.05) rotate(-2deg);
+  border-color: #ff00ff;
+}
+
+.project-card h3 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-top: 0;
+  background: conic-gradient(
+    from var(--spin-angle),
+    red, orange, yellow, green, cyan, blue, magenta, red
+  );
+  color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.6px #000;
+  text-shadow: none;
+  animation: spin-text-rainbow 2s linear infinite;
+}
+
+.project-card p {
+  font-size: 1.7rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  color: #333;
+  -webkit-text-stroke: 0px;
+}
+
+/* =========================================
+   ABOUT / README VIEW
+   ========================================= */
+#readme-view {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 110px 20px 60px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  gap: 24px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#readme-view::-webkit-scrollbar {
+  display: none;
+}
+
+body.about-active #readme-view {
+  display: flex;
+}
+
+body.about-active .brand-header,
+body.about-active .site-title,
+body.about-active #projects-container {
+  display: none;
+}
+
+/* =========================================
+   DOC NAV ARROWS
+   ========================================= */
+.doc-nav-arrow {
+  position: sticky;
+  top: 50%;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: calc(50vh - 110px - 70px);
+  width: 100px;
+  height: 140px;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 1;
+  border: 5px solid #333;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(
+    from var(--spin-angle),
+    red, orange, yellow, green, cyan, blue, magenta, red
+  );
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  color: #000;
+  -webkit-text-stroke: 2px #000;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.4);
+  animation: spin-text-rainbow 2s linear infinite;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  z-index: 910;
+}
+
+.doc-nav-arrow:hover {
+  transform: scale(1.12);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.45);
+}
+
+.doc-nav-arrow:active {
+  transform: scale(0.95);
+}
+
+.doc-arrow-left.arrow-inactive {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.doc-arrow-right.arrow-inactive {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* =========================================
+   DOC TITLE BAR
+   ========================================= */
+#doc-title-bar {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#doc-title-label {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background: conic-gradient(
+    from var(--spin-angle),
+    red, orange, yellow, green, cyan, blue, magenta, red
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 1.5px #000;
+  animation: spin-text-rainbow 2s linear infinite;
+  display: inline-block;
+}
+
+/* =========================================
+   README PANEL
+   ========================================= */
+#readme-panel {
+  max-width: 780px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 6px solid #333;
+  border-radius: 25px;
+  padding: 40px 50px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.readme-loading {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #333;
+  -webkit-text-stroke: 0px;
+}
+
+/* =========================================
+   README CONTENT TYPOGRAPHY
+   ========================================= */
+#readme-content h1,
+#readme-content h2,
+#readme-content h3 {
+  background: none;
+  color: #d6009a;
+  -webkit-text-stroke: 0px;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  text-transform: none;
+  text-shadow: none;
+  animation: none;
+}
+
+#readme-content h1 {
+  font-size: 2.3rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+#readme-content h2 {
+  font-size: 1.6rem;
+  color: #ff6f00;
+  border-bottom: 3px dashed #ff6f00;
+  padding-bottom: 6px;
+}
+
+#readme-content h3 {
+  font-size: 1.25rem;
+  color: #0088aa;
+}
+
+#readme-content p,
+#readme-content li {
+  font-size: 1.05rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #1a1a1a;
+  -webkit-text-stroke: 0px;
+}
+
+#readme-content a {
+  color: #d6009a;
+  font-weight: bold;
+}
+
+#readme-content a:hover {
+  color: #ff6f00;
+}
+
+#readme-content code {
+  background: #111;
+  color: #7CFC00;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  -webkit-text-stroke: 0px;
+}
+
+#readme-content pre {
+  background: #111;
+  color: #7CFC00;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+  -webkit-text-stroke: 0px;
+}
+
+#readme-content pre code {
+  background: none;
+  padding: 0;
+}
+
+#readme-content blockquote {
+  border-left: 5px solid #ff00ff;
+  margin: 15px 0;
+  padding: 6px 18px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.4);
+  color: #1a1a1a;
+}
+
+#readme-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+#readme-content th,
+#readme-content td {
+  border: 2px solid #333;
+  padding: 6px 10px;
+  color: #1a1a1a;
+}
+
+#readme-content th {
+  background: #333;
+  color: #fff;
+}
+
+#readme-content img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* =========================================
+   WIKI CONTENT TYPOGRAPHY
+   ========================================= */
+#wiki-content h1,
+#wiki-content h2,
+#wiki-content h3 {
+  background: none;
+  color: #d6009a;
+  -webkit-text-stroke: 0px;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  text-transform: none;
+  text-shadow: none;
+  animation: none;
+}
+
+#wiki-content h1 {
+  font-size: 2.3rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+#wiki-content h2 {
+  font-size: 1.6rem;
+  color: #ff6f00;
+  border-bottom: 3px dashed #ff6f00;
+  padding-bottom: 6px;
+}
+
+#wiki-content h3 {
+  font-size: 1.25rem;
+  color: #0088aa;
+}
+
+#wiki-content p,
+#wiki-content li {
+  font-size: 1.05rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #1a1a1a;
+  -webkit-text-stroke: 0px;
+}
+
+#wiki-content a {
+  color: #d6009a;
+  font-weight: bold;
+}
+
+#wiki-content a:hover {
+  color: #ff6f00;
+}
+
+#wiki-content code {
+  background: #111;
+  color: #7CFC00;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  -webkit-text-stroke: 0px;
+}
+
+#wiki-content pre {
+  background: #111;
+  color: #7CFC00;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+  -webkit-text-stroke: 0px;
+}
+
+#wiki-content pre code {
+  background: none;
+  padding: 0;
+}
+
+#wiki-content blockquote {
+  border-left: 5px solid #ff00ff;
+  margin: 15px 0;
+  padding: 6px 18px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.4);
+  color: #1a1a1a;
+}
+
+#wiki-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+#wiki-content th,
+#wiki-content td {
+  border: 2px solid #333;
+  padding: 6px 10px;
+  color: #1a1a1a;
+}
+
+#wiki-content th {
+  background: #333;
+  color: #fff;
+}
+
+#wiki-content img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* =========================================
+   GAMEPAD / CONTROLLER NAVIGATION
+   ========================================= */
+.gamepad-selected {
+  box-shadow:
+    0 0 0 4px #00d4ff,
+    0 0 0 4px #00d4ff;
+  animation: spin-text-rainbow 2s linear infinite, gamepad-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes gamepad-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px #00d4ff, 0 0 10px 4px rgba(0, 212, 255, 0.45); }
+  50%       { box-shadow: 0 0 0 6px #7fe9ff, 0 0 20px 6px rgba(127, 233, 255, 0.65); }
+}
+
+.gamepad-toast {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  z-index: 1500;
+  transform: translateX(-50%) translateY(-12px);
+  background: rgba(0, 0, 0, 0.85);
+  color: #00e5ff;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px 22px;
+  border: 3px solid #00d4ff;
+  border-radius: 14px;
+  text-align: center;
+  max-width: 90vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gamepad-toast-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
