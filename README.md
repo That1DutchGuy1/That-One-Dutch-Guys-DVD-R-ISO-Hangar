@@ -11,7 +11,7 @@
 <p><strong><font size="5">WELCOME TO MY DVD-R ISO HANGAR!</font></strong></p>
 <img src="./dvd_spin.gif" alt="Spinning DVD GIF" width="50" />
 
-<p><strong><font size="3">This shitty website is basically an altered version of the Shit Ass Toybox! 🤯</font></strong></p>
+<p><strong><font size="3">This shitty website is basically an altered older version of the Shit Ass Toybox! 🤯</font></strong></p>
 <p><strong><font size="3">Except THIS is a old YTP preservation project site! 😎</font></strong></p>
 <p><strong><font size="3">It uses the same eye-bleedingly fabulous design in fact! ☢️</font></strong></p>
 <p><strong><font size="3">All the ISO files are hosted on fucking Mega! 🌐</font></strong></p>
@@ -21,7 +21,7 @@
 
 <p><strong><font size="5">Currently available ISO's:</font></strong></p>
 
-<p><strong><font size="3">YTP Classics CD-i - featuring 17 classic YTP videos centered around the Nintendo licensed CD-i Zelda games and Hotel Mario!</font></strong></p>
+<p><strong><font size="3">YTP Classics CD-i - featuring 17 classic YTP videos centered around CD-i Zelda and Hotel Mario!</font></strong></p>
 
 ---
 
