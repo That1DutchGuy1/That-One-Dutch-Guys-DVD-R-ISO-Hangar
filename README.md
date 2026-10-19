@@ -33,6 +33,7 @@
 <ul>
 <li><strong><font size="4">Step 1: Click the fucking fabulous rainbow download button and you'll be taken to Mega's website! 👀</font></strong></li>
 <li><strong><font size="4">Step 2: Download the ISO of your good choice and pray that you don't have shitty internet! 🖥️🔌🌐</font></strong></li>
+<li><strong><font size="4">Step 3: Download the ISO of your good choice and pray that you don't have shitty internet! 🖥️🔌🌐</font></strong></li>
 <li><strong><font size="4">DONE!</font></strong></li>
 </ul>
 
@@ -48,5 +49,13 @@
 <li><strong><font size="4">Step 5: Keep your dirty lil fingers off the drive while it's burning and wait! ⌚️</font></strong></li>
 <li><strong><font size="4">Step 6: Once it's done, YEET that bad boi into any DVD player and BINGE! 📺</font></strong></li>
 </ul>
+
+---
+
+<p><strong><font size="5">Tips:</font></strong></p>
+
+
+<p><strong><font size="4">1. Set the burning speed to a slow speed! Trust me, it will pay off cuz faster speeds can cause stutters and shit! 🔥</font></strong></p>
+
 
 ---
