@@ -1,9 +1,9 @@
-<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
   <a href="https://www.youtube.com/@That1DutchGuy">
-    <img src="./That-One-Dutch-Guy-Channel-Logo-Circle.png" alt="My YouTube Channel" width="150" />
+    <img src="./hub-assets/That-One-Dutch-Guy-Channel-Logo-Circle.png" alt="My YouTube Channel" width="250" />
   </a>
   <br>
-  <img src="./That-One-Dutch-Guy-Logo-Text.png" alt="That One Dutch Guy" width="150" />
+  <img src="./hub-assets/That-One-Dutch-Guy-Logo-Text.png" alt="That One Dutch Guy" width="350" />
 </div>
 <br>
 
@@ -19,34 +19,17 @@ YouTube status: Inactive <br>
 Nationality: Dutch <br>
 Location: Netherlands <br>
 
-Channel trailer: <br>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sy1YFUZR83Y?si=iDUyMYYrDrXuvsry" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-Most viewed video: <br>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yY3RNpHk-gU?si=6KUD3RfLoEQCkf4j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-First video: <br>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UHUS9diWlz4?si=zy4ATyBUPGO0_aht" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-Other channel <br>
 
 ## That One Dutch Guy Extra
 
-<img src="./extra-channel-pfp.jpg" alt="That One Dutch Guy Extra" width="150" />
+<img src="./hub-assets/extra-channel-pfp.jpg" alt="That One Dutch Guy Extra" width="150" />
 
 Username: That1DutchGuyExtra <br>
 Style: Gaming, Animations, Memes <br>
 Join date: February 6, 2023 <br>
 Video count: 10 <br>
 YouTube status: Inactive <br>
-Channel trailer: <br>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CnkYV0BzA1c?si=3M05llfvO-_IbMhh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Most viewed video: <br>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/M1tPRzS-fQU?si=gcyhk8WWoy3Jpn1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-First video: <br>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/68D-8R-eyEE?si=CeCW_bs8kwsF2kgj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Intro
 
@@ -103,6 +86,10 @@ Here is a list of the currently listed games on his website.
 </ul>
 
 He has also made a <a href="https://github.com/That1DutchGuy1/King-Harkinian-Desktop-Pet" target="_blank">King Harkinian Desktop Pet</a> for Linux Mint 22 in Python, a harmless <a href="https://github.com/That1DutchGuy1/The-Weegee-Virus-Prank" target="_blank">Weegee Virus Prank App</a> Debian package for Linux Mint 22, a <a href="https://github.com/That1DutchGuy1/soundbuttons.github.io" target="_blank">soundbutton collection website</a>, and a <a href="https://github.com/That1DutchGuy1/Funny-CD-i-Themed-WhatsApp-Sticker-Pack" target="_blank">CD-i themed WhatsApp sticker pack</a> as well. They're all available publicly on his <a href="https://github.com/That1DutchGuy1" target="_blank">GitHub profile</a> publicly.
+
+One of his hobbies is burning custom YTP DVDs, so he shared this joy with his brand new site, <a href="https://that1dutchguy1.github.io/That-One-Dutch-Guys-DVD-R-ISO-Hangar/" target="_blank">That One Dutch Guy's DVD-R ISO Hangar</a>, where he hosts download links to his custom ISO files, which are hosted on Mega.
+
+He also has a <a href="https://www.deviantart.com/that1dutchguy" target="_blank">DeviantArt</a> profile, where he posts meme compositions mainly made in Photopea. 
 
 That One Dutch Guy also has a <a href="https://www.gta5-mods.com/users/That1DutchGuy" target="_blank">Gta 5 Mods</a> profile where he made a few Grand Theft Auto 5 mods. It seems like it's currently inactive though.
 
