@@ -83,6 +83,8 @@ Here is a list of the currently listed games on his website.
   <li>Meme Mafia</li>
   <li>Grand Meme Prix 3D</li>
   <li>I.M. Meen's Book Shredding Simulator</li>
+  <li>Meme Solitaire</li>
+  <li>King Harkinian Desktop Pet - Browser Version</li>
 </ul>
 
 He has also made a <a href="https://github.com/That1DutchGuy1/King-Harkinian-Desktop-Pet" target="_blank">King Harkinian Desktop Pet</a> for Linux Mint 22 in Python, a harmless <a href="https://github.com/That1DutchGuy1/The-Weegee-Virus-Prank" target="_blank">Weegee Virus Prank App</a> Debian package for Linux Mint 22, a <a href="https://github.com/That1DutchGuy1/soundbuttons.github.io" target="_blank">soundbutton collection website</a>, and a <a href="https://github.com/That1DutchGuy1/Funny-CD-i-Themed-WhatsApp-Sticker-Pack" target="_blank">CD-i themed WhatsApp sticker pack</a> as well. They're all available publicly on his <a href="https://github.com/That1DutchGuy1" target="_blank">GitHub profile</a> publicly.
